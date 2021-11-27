@@ -1,0 +1,378 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Home</title>
+     <style>
+ 
+ .jumbotron{
+    background-color: #815a7b;
+     /*background-image: url('{{ STATIC_URL }}/static/images/fin2.jpg');*/
+     background-size: cover;
+     color:white;
+ 
+     }
+
+ 
+ body {
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: rgba(136, 132, 132, 0);
+   background-image: url("https://wallpaperaccess.com/full/2014748.jpg");   
+ }
+ 
+  
+ .column {
+   float: left;
+   width: 50%;
+   padding: 0 10px;
+ }
+ 
+ /* Remove extra left and right margins, due to padding in columns */
+ .row {margin: 0 150px;}
+ 
+ /* Clear floats after the columns */
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ /* Style the counter cards */
+ .card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+   padding: 16px;
+   
+   background-color: #f1f1f1;
+ }
+ 
+ /* Responsive columns - one column layout (vertical) on small screens */
+ @media screen and (max-width: 600px) {
+   .column {
+     width: 100%;
+     display: block;
+     margin-bottom: 20px;
+   }
+ }
+
+ nav {
+  display:block;
+  position:absolute;
+  top:10%;
+  left:0;
+  margin:0 auto;
+  padding:0;
+  width:100%;
+  height:40px;
+  
+  text-align:center;
+  
+  background-color:rgb(3, 43, 70);
+}
+
+nav ul {
+  margin:0;
+  padding:0;
+}
+
+nav ul li {
+  display:inline-block;
+  position:relative;
+  margin-left:5px;
+  margin-right:5px;
+  top:-17px;
+  padding:10px;
+  z-index:999;
+  
+  list-style:none;
+  
+  border-radius:7px;
+  box-shadow:0px 0px 10px #000,
+  inset 0px 5px 5px -6px #fff;
+  
+  background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top,  #45484d 0%, #191919 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#191919)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #45484d 0%,#191919 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #45484d 0%,#191919 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #45484d 0%,#191919 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #45484d 0%,#191919 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#191919',GradientType=0 ); /* IE6-9 */
+
+}
+
+nav ul li a {
+  display:block;
+  position:relative;
+  padding:15px;
+  
+  color:#fff;
+  font-family:Arial;
+  font-size:1.1em;
+  text-decoration:none;
+  text-shadow:0px 1px 5px #1e1e1e;
+  
+  border-radius:7px;
+  
+  box-shadow:0px 0px 5px transparent,
+  inset 0px 0px 5px transparent,
+   0px 1px 5px #000;
+  -webkit-transition: all .20s ease;;
+  -moz-transition: all .20s ease;;
+  -o-transition: all .20s ease;;
+  transition: all .20s ease;;
+}
+
+nav ul li a:hover {
+  
+  text-shadow:0px 2px 10px #000;
+  
+  box-shadow:0px 0px 10px #09f,
+  inset 0px 0px 10px -1px #000;
+}
+
+.container {
+  max-width: 80%;
+  width: 100%;
+  
+  margin-top: 200px;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  height: 600px;
+  overflow: scroll;
+  margin: 50px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+   
+  </style>
+  </head>
+  <body>
+
+    <nav>
+      <ul>
+        <li><a href="/homepage">Cohort</a></li>
+        <li><a href="/experience/add">Add Experience</a></li>
+        <li><a href="/myprofile">My Account</a></li>
+        <li><a href="/myexperiences">My Experiences</a></li>
+        <li><a href="/homepage/userlogout">Logout</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">  
+        <form id="contact" action="/experience/add/" method="post">{% csrf_token %}
+          <h3>Add Experience</h3>
+         <div class="form-group">
+    <label for="name">Company</label>
+    <input type="text" class="form-control" id="company" name='company' placeholder="Enter the name of the company">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Job Profile</label>
+    <select style=" text-align: left;" class="form-control" id="JobProfile" name="JobProfile">
+        <option value="Business Analyst">Business Analyst</option>
+        <option value="Data Analyst">Data Analyst</option>
+        <option value="Data Scientist">Data Scientist</option>
+        <option value="Marketing Manager">Marketing Manager</option>
+        <option value="Operations Analyst">Operations Analyst</option>
+        <option value="Software Developer">Software Developer</option>
+        <option value="System Engineer">System Engineer</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Work Experience</label>
+    <select style=" text-align: left;" class="form-control" id="workexp" name="workexp">
+        <option value="0">0-2 Years</option>
+        <option value="2">2-4 Years</option>
+        <option value="4">>4 Years</option>
+    </select>
+  </div>
+
+  <h5>ROUND 1</h5>
+
+  <div class="form-group">
+    <label for="name">Duration</label>
+    <input type="number" class="form-control" id="duration1" name='duration1' placeholder="Enter duration of round 1 (in minutes)">
+  </div>
+
+   <div class="form-group">
+    <label for="desc">Brief Explanation </label>
+    <textarea class="form-control" id="desc1" name='desc1'></textarea>
+  </div>
+
+  <h5>ROUND 2</h5>
+
+  <div class="form-group">
+    <label for="name">Duration</label>
+    <input type="number" class="form-control" id="duration2" name='duration2' placeholder="Enter duration of round 2 (in minutes)">
+  </div>
+
+   <div class="form-group">
+    <label for="desc">Brief Explanation </label>
+    <textarea class="form-control" id="desc2" name='desc2'></textarea>
+  </div>
+
+  <h5>ROUND 3</h5>
+
+  <div class="form-group">
+    <label for="name">Duration</label>
+    <input type="number" class="form-control" id="duration3" name='duration3' placeholder="Enter duration of round 3 (in minutes)">
+  </div>
+
+   <div class="form-group">
+    <label for="desc">Brief Explanation </label>
+    <textarea class="form-control" id="desc3" name='desc3'></textarea>
+  </div>
+
+  <h5>ROUND 4</h5>
+
+  <div class="form-group">
+    <label for="name">Duration</label>
+    <input type="number" class="form-control" id="duration4" name='duration4' placeholder="Enter duration of round 4 (in minutes)">
+  </div>
+
+   <div class="form-group">
+    <label for="desc">Brief Explanation </label>
+    <textarea class="form-control" id="desc4" name='desc4'></textarea>
+  </div>
+
+  <h5>ROUND 5</h5>
+
+  <div class="form-group">
+    <label for="name">Duration</label>
+    <input type="number" class="form-control" id="duration5" name='duration5' placeholder="Enter duration of round 5 (in minutes)">
+  </div>
+
+   <div class="form-group">
+    <label for="desc">Brief Explanation </label>
+    <textarea class="form-control" id="desc5" name='desc5'></textarea>
+  </div>
+  <div class="container-login100-form-btn" style=" align-self: center; width : 200px">
+    <div class="wrap-login100-form-btn">
+      <div class="login100-form-bgbtn"></div>
+      <button class="login100-form-btn" type="submit">
+        Upload
+      </button>
+    </div>
+  </div>
+        </form>
+      </div>
+</body>
+</html>

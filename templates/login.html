@@ -1,0 +1,150 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login Page</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		 <link rel="stylesheet" type="text/css" href="{% static 'css/util.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}"> 
+
+		<style type="text/css">
+			
+body{
+    background-color: rgba(136, 132, 132, 0);
+    background-image: url("https://wallpaperaccess.com/full/2014748.jpg");   
+}
+
+
+.content{
+    border-radius: 10%;
+    background-color: rgba(240, 255, 240, 0.513);
+    width: 30%;
+    padding: 0.9%;
+    margin-left: auto;
+    margin-top: 10%;
+    margin-right: auto;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 120%;
+}
+
+input{
+    border-radius: 0%;
+    border-color: transparent;
+    width: 30%;
+    padding: 0.9%;
+    font-family: sans-serif;
+
+}
+
+h1{
+    font-family: sans-serif;
+    
+}
+
+#profile{
+    width: 50%;
+    border-radius: 600%;
+}
+
+button {
+    border: 30%;
+	padding: 10px;
+    background-color: rgba(162, 175, 162, 0.609);
+    text-decoration: none;
+    
+    border: none;
+    padding: 2%;
+    border-radius: 10%;
+}
+
+button:hover{
+    background-color: rgb(162, 175, 162);
+    cursor: pointer;
+}
+
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+ 
+.loginBtn{
+	margin-left: 160px;
+	margin-bottom: 30px;
+}
+
+
+/*Media Devices*/
+
+@media only screen and (max-width: 600px) {
+    .content{
+        width: 90%;
+    }
+  }
+
+			
+		</style>
+	</head>
+
+	<body>
+		<br>
+		<a style="float: right; margin-right: 20px;" href="/" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">COHORT</a>
+		<div class="content">
+			<form class="login100-form validate-form" method="post">
+				{% csrf_token %}
+					<div style="text-align: center;" class="container">
+							<div class="row center" >
+								<H1>Login</H1>
+							</div>
+						<div class="row center">
+							<img id="profile" src="./../static/images/Freshteam_Interview_Experience.png" alt="">
+						</div>
+						<br>
+						<div class="row center">
+							 <label for=""> Username</label>
+							 <input type="text" required = "true" name="username" id="" placeholder="Username"  >    
+							</div>
+							<br>
+						<div class="row center">
+							<label for="">Password</label>
+							<input type="password" required="true" name="password" id="" placeholder="Password"  >
+						</div>
+						<br>
+						<div class="row loginBtn">
+							<button type='submit'>Login</button>
+						</div>
+						<div style="margin-left: 60px;" class="row">
+							<br><br>
+							<span style="text-align: center;" class="txt1">
+								{%for i in messages%}
+                    				<p>{{i}}</p>
+                				{% endfor %}</span>
+
+							<span style="font-size: large;" class="txt1">
+								Don’t have an account? 
+							</span>
+							<a style="font-size: large;" class="txt2" href="{% url 'registration' %}">
+								Register Here
+							</a>
+						</div>
+					</div>
+			  
+			</form>
+		</div>
+		<div id="dropDownSelect1"></div>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="059010966bcb1ededa97392c-text/javascript"></script>
+		<script type="059010966bcb1ededa97392c-text/javascript">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-23581568-13');
+		</script>
+		<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="059010966bcb1ededa97392c-|49" defer=""></script>
+	</body>
+</html>
