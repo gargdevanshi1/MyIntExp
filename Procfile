@@ -1,0 +1,1 @@
+web: gunicorn Cohort_vF.wsgi
