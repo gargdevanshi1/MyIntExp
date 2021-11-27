@@ -1,3 +1,3 @@
-web: gunicorn Cohort_vF.wsgi:application --log-file - --log-level debug
+web: gunicorn cohort.wsgi:application --log-file - --log-level debug
 heroku ps:scale web=1
 python manage.py migrate
