@@ -197,7 +197,7 @@ def login_moderator(request):
 		uname=request.POST.get('username')
 		passw=request.POST.get('password')
 		user=authenticate(username=uname,password=passw)
-		if user and request.user.is_superuser:
+		if user and user.is_superuser:
 			if user.is_active:
 				#After authentication-> user will be true
 				auth_login(request,user)
